@@ -1,0 +1,6 @@
+# vscode config folder
+.vscode/
+# jupyter config folder
+.ipynb_checkpoints/
+# python config folder
+__pycache__/
