@@ -14,4 +14,17 @@ insights in what songs their users are listening to.
 
 ## AWS EMR cluster
 
-Configuring
+Installing and configuring spark is not easy. That why I'll leverage the power
+of amazon ElasticMapReduce. Go to AWS management console and search for EMR
+service. Then click on `create cluster` and configure the cluster as follow:
+
+![Launch EMR](images/emr-cluster.png)
+
+When the cluster is running or in a waiting status. Click on `notebook`
+(left side) and then click on `create notebook` blue button:
+
+![create notebook](images/create-notebook.png)
+
+Click on `Open in JupyterLab` button when the notebook is ready:
+
+![launch notebook](images/open-notebook.png)
