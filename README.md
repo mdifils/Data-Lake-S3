@@ -28,3 +28,37 @@ When the cluster is running or in a waiting status. Click on `notebook`
 Click on `Open in JupyterLab` button when the notebook is ready:
 
 ![launch notebook](images/open-notebook.png)
+
+## ETL pipeline
+
+Open the `etl.ipynb` to see the pipeline process.
+
+## RUN `etl.py`
+
+Make sure to allow ssh connection in the master node security group:
+
+![SSH](images/security-group.png)
+
+Make sure to `output_data` inside `etl.py` file with your own private s3 bucket
+path. **Otherwise the script will through an error while trying to save data into
+parquet files inside S3**.
+
+![bucket](images/s3-bucket.png)
+
+Make sure you know where your key-pair.pem used for EMR cluster is located.
+Download the `etl.py` file on your local machine and copy it into EMR cluster.  
+`scp -i /path/to/key-pair.pem Download/etl.py hadoop@<master-node-public-IP>:~/.`
+
+SSH into your EMR cluster:
+`ssh -i /path/to/key-pair.pem hadoop@<master-node-public-IP>`
+
+Check that `etl.py` has been successfully copied then submit
+
+![RUN](images/run-etl.png)
+
+**Notice:**  
+This may take up to 15 minutes to complete (depending on the number of spark workers).
+
+After it's done, the bucket should look like below:
+
+![bucket](images/bucket-s3.png)
