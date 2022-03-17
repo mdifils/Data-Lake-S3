@@ -31,7 +31,8 @@ Click on `Open in JupyterLab` button when the notebook is ready:
 
 ## ETL pipeline
 
-Open the `etl.ipynb` to see the pipeline process.
+**PLEASE** open the `etl.ipynb` to see the pipeline process. It is well
+commented and easy to follow.
 
 ## RUN `etl.py`
 
