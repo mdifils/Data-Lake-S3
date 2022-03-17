@@ -39,7 +39,7 @@ Make sure to allow ssh connection in the master node security group:
 
 ![SSH](images/security-group.png)
 
-Make sure to `output_data` inside `etl.py` file with your own private s3 bucket
+Make sure to update `output_data` inside `etl.py` file with your own private s3 bucket
 path. **Otherwise the script will through an error while trying to save data into
 parquet files inside S3**.
 
